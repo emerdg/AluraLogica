@@ -1,0 +1,60 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+	var tempo = 0;
+	x = 300;
+	y = 200;
+	movex = 1;
+	movey = 1;
+	raio = 15;
+	mraio = 1;
+	vcor = 1;
+	rgb = 0;
+
+    var tela = document.querySelector('canvas');
+    var bg = tela.getContext('2d');
+    var pincel = tela.getContext('2d');
+    bg.fillStyle = 'lightgray';
+    bg.fillRect(0, 0, 600, 400);
+
+    function desenhaCirculo(x,y,raio,cor) {
+    	pincel.fillStyle = cor;
+    	pincel.beginPath();
+    	pincel.arc(x,y,raio,0,2*Math.PI);
+    	pincel.fill();
+    }
+
+    function limpaTela (){
+		pincel.clearRect(10,10,580,380);    
+    }
+
+    function mensagemConsole(){
+    	console.log(tempo);
+    }
+
+    function atualizaTela(){
+    	//limpaTela();
+    	desenhaCirculo(x,y,raio, 'rgb('+(255-rgb)+','+ rgb +','+(255-rgb)+')');
+    	desenhaCirculo(x*-1+600,y,raio, 'rgb('+ rgb+','+(255-rgb)+','+rgb+')');
+    	desenhaCirculo(x,y*-1+400,raio, 'rgb('+(255-rgb)+','+(255-rgb)+','+rgb+')');
+    	desenhaCirculo(x*-1+600,y*-1+400,raio, 'rgb('+rgb+','+(255-rgb)+','+(255-rgb)+')');
+
+    	if (x    <20 	|| x > 580) movex = movex*-1;
+    	if (y    <20 	|| y > 380) movey = movey*-1;
+		if (raio <5  	|| raio > 30) mraio = mraio*-1;
+		if (rgb  < 0  	|| rgb  > 255) vcor = vcor*-1;
+
+		raio += mraio;
+		rgb += vcor;
+    	x+= movex;
+    	y+= movey;
+    }
+
+    setInterval(atualizaTela, 5);
+
+    /********************************************
+    ********************************************
+    *******************************************/
+
+</script>
