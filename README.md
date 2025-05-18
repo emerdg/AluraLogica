@@ -24,7 +24,7 @@ Preparar o terreno é super simples, mas requer um passo importante: sua chave d
 1.  **Pegue Sua Chave Mágica (API Key):** Se você não tem uma, crie a sua chave da Google Gemini API no [Google AI Studio](https://aistudio.google.com/). É grátis para começar!
 2.  **Abra no Colab:** Clique no badge mágico lá no início deste README: <kbd><a href="https://colab.research.google.com/github/emerdg/AluraLogica/blob/master/Narrador_Interativo.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></kbd> Ele abrirá o notebook no Google Colab.
 3.  **Guarde o Segredo (Sua API Key):** Dentro do Colab, clique no ícone de uma chave/cadeado na barra lateral esquerda (<kbd>🔑</kbd>). Adicione uma **Nova Chave de Segredo**. O **Nome** do segredo deve ser `GOOGLE_API_KEY` (sim, *exatamente* assim!). No campo **Valor**, cole a sua chave da API que você pegou no passo 1. Não se preocupe, o Colab guarda isso de forma segura e não expõe sua chave no código público.
-4.  **Prepare os Motores:** Rode a **primeira célula de código**. Ela instala as bibliotecas necessárias e faz uns ajustes nos bastidores. Veja a mágica da função `digitar` acontecendo! ✨
+4.  **Prepare os Motores:** Rode a **primeira célula de código**. Ela instala as bibliotecas necessárias e faz uns ajustes nos bastidores.
 5.  **Ajuste os Engajamentos:** Rode a **segunda célula de código**. Essa define as funções e os "agentes" (os assistentes do Gemini) que vão configurar seu narrador, mundo e personagem.
 6.  **Comece a Conversa!** Rode a **terceira célula de código**. Ela vai te fazer algumas perguntas para configurar o narrador, o cenário e o seu personagem. Responda com criatividade (ou deixe em branco para ele inventar algo!).
 7.  **A História Começa:** Depois das perguntas, o narrador (o Gemini) vai se apresentar e começar a contar a sua história. Digite suas ações ou escolhas quando for sua vez (`SUA VEZ:`).
@@ -59,3 +59,7 @@ Este projeto é fruto do aprendizado na incrível **Imersão Dev Google + Alura*
 ---
 
 Pronto para a sua próxima aventura literária interativa? 📖✨
+
+## 🆕 Update
+
+*   Com o poder do Gemini, pedi uma ajuda para melhorar a parte visual do projeto. Obrigado Gemini mais uma vez!
